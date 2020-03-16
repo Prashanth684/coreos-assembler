@@ -45,11 +45,11 @@ install_rpms() {
     # continuous tag?)
     local libguestfs_koji="https://kojipkgs.fedoraproject.org//packages/libguestfs/1.42.0/1.fc32"
     yum -y install \
-        ${libguestfs_koji}/x86_64/libguestfs-1.42.0-1.fc32.x86_64.rpm \
-        ${libguestfs_koji}/x86_64/libguestfs-xfs-1.42.0-1.fc32.x86_64.rpm \
-        ${libguestfs_koji}/x86_64/libguestfs-tools-c-1.42.0-1.fc32.x86_64.rpm \
+        ${libguestfs_koji}/${arch}/libguestfs-1.42.0-1.fc32.${arch}.rpm \
+        ${libguestfs_koji}/${arch}/libguestfs-xfs-1.42.0-1.fc32.${arch}.rpm \
+        ${libguestfs_koji}/${arch}/libguestfs-tools-c-1.42.0-1.fc32.${arch}.rpm \
         ${libguestfs_koji}/noarch/libguestfs-tools-1.42.0-1.fc32.noarch.rpm \
-        ${libguestfs_koji}/x86_64/perl-Sys-Guestfs-1.42.0-1.fc32.x86_64.rpm
+        ${libguestfs_koji}/${arch}/perl-Sys-Guestfs-1.42.0-1.fc32.${arch}.rpm
 
     # These are only used to build things in here.  Today
     # we ship these in the container too to make it easier
